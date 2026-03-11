@@ -168,22 +168,23 @@ h1, h2, h3 { font-family: 'Syne', sans-serif !important; color: #e2e8f0 !importa
     line-height: 1.6;
 }
 
-/* ── Buttons ── */
+/* ── All buttons: bright visible green ── */
 .stButton > button {
     background: linear-gradient(135deg, #00c896, #00a07a) !important;
-    color: #060910 !important;
+    color: #050e0a !important;
     border: none !important;
     border-radius: 12px !important;
-    padding: 0.6rem 1.8rem !important;
+    padding: 0.55rem 1.6rem !important;
     font-family: 'Syne', sans-serif !important;
     font-weight: 700 !important;
-    font-size: 0.9rem !important;
-    letter-spacing: 0.03em !important;
-    transition: all 0.25s ease !important;
+    font-size: 0.88rem !important;
+    letter-spacing: 0.02em !important;
+    transition: all 0.2s ease !important;
+    min-height: 42px !important;
 }
 .stButton > button:hover {
     transform: translateY(-2px) !important;
-    box-shadow: 0 8px 25px rgba(0,200,150,0.35) !important;
+    box-shadow: 0 8px 24px rgba(0,200,150,0.4) !important;
     background: linear-gradient(135deg, #00e6aa, #00b88a) !important;
 }
 
@@ -228,69 +229,26 @@ p, li, label { color: #94a3b8 !important; }
 /* Fix: push content below Streamlit top bar */
 .block-container { padding-top: 2.8rem !important; }
 
-/* Fix: compact secondary buttons - quick questions and medicine chips */
-div[data-testid="column"] .stButton > button {
-    background: rgba(0,255,180,0.04) !important;
-    color: #64748b !important;
-    border: 1px solid rgba(0,255,180,0.15) !important;
-    border-radius: 20px !important;
-    padding: 4px 10px !important;
-    font-size: 0.75rem !important;
-    font-weight: 400 !important;
-    font-family: 'DM Sans', sans-serif !important;
-    min-height: 0px !important;
-    height: auto !important;
-    letter-spacing: 0 !important;
-    box-shadow: none !important;
-    transform: none !important;
-}
-div[data-testid="column"] .stButton > button:hover {
-    border-color: rgba(0,255,180,0.5) !important;
-    color: #00ffb4 !important;
-    background: rgba(0,255,180,0.08) !important;
-    transform: none !important;
-    box-shadow: none !important;
-}
-
-/* ── Restore ALL primary standalone buttons (Clear, Send, Generate, Calculate) ── */
-/* These are buttons NOT inside a column grid */
-.stButton > button {
-    background: linear-gradient(135deg, #00c896, #00a07a) !important;
-    color: #060910 !important;
-    border: none !important;
-    border-radius: 12px !important;
-    padding: 0.55rem 1.5rem !important;
-    font-family: 'Syne', sans-serif !important;
-    font-weight: 700 !important;
-    font-size: 0.88rem !important;
-    letter-spacing: 0.02em !important;
-}
-.stButton > button:hover {
-    transform: translateY(-2px) !important;
-    box-shadow: 0 6px 20px rgba(0,200,150,0.35) !important;
-    background: linear-gradient(135deg, #00e6aa, #00b88a) !important;
-}
-
-/* ── Override: column-grid buttons become compact chips ── */
-div[data-testid="column"] .stButton > button {
+/* ── Chip buttons: target by button key (qq0-qq3, pm0-pm5) ── */
+/* Streamlit sets data-testid on the button's parent div */
+[data-testid="stButton"]:has(button[kind="secondary"]) > button,
+button[data-testid="qq0"], button[data-testid="qq1"],
+button[data-testid="qq2"], button[data-testid="qq3"],
+button[data-testid="pm0"], button[data-testid="pm1"],
+button[data-testid="pm2"], button[data-testid="pm3"],
+button[data-testid="pm4"], button[data-testid="pm5"] {
     background: rgba(0,255,180,0.04) !important;
     color: #64748b !important;
     border: 1px solid rgba(0,255,180,0.18) !important;
     border-radius: 20px !important;
-    padding: 5px 12px !important;
+    padding: 5px 14px !important;
     font-size: 0.76rem !important;
     font-weight: 400 !important;
     font-family: 'DM Sans', sans-serif !important;
     letter-spacing: 0 !important;
     box-shadow: none !important;
     transform: none !important;
-}
-div[data-testid="column"] .stButton > button:hover {
-    border-color: rgba(0,255,180,0.5) !important;
-    color: #00ffb4 !important;
-    background: rgba(0,255,180,0.08) !important;
-    transform: none !important;
-    box-shadow: none !important;
+    min-height: 0 !important;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -453,8 +411,7 @@ elif page == "🔬  Symptom Checker":
         with col_r:
             st.markdown("<div style='padding-top:1.8rem'>", unsafe_allow_html=True)
             predict_btn = st.button("🔮 Predict", use_container_width=True)
-            st.markdown("</div>", unsafe_allow_html=True)
-
+        
         # Quick-pick common symptoms
         st.markdown("<div style='margin:0.5rem 0 0.3rem;font-size:0.8rem;color:#475569;font-weight:500'>⚡ Quick select common symptoms:</div>", unsafe_allow_html=True)
         common = ["fever","headache","cough","fatigue","nausea","vomiting",
