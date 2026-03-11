@@ -1,0 +1,65 @@
+# ── API Keys & Secrets ────────────────────────────────────────────────────────
+.env
+*.env
+.env.local
+.env.production
+
+# Kaggle credentials
+.kaggle/
+kaggle.json
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# ── ML Model Files (large binaries) ──────────────────────────────────────────
+model/*.pkl
+model/*.h5
+model/*.joblib
+# Keep the JSON info files
+!model/model_info.json
+!model/symptom_columns.json
+
+# ── Data Files (large datasets) ──────────────────────────────────────────────
+data/*.csv
+data/*.zip
+data/*.xlsx
+# Keep the disease info we built
+!data/disease_info.json
+
+# ── Streamlit ─────────────────────────────────────────────────────────────────
+.streamlit/secrets.toml
+
+# ── OS Files ─────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDEs ─────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Misc ─────────────────────────────────────────────────────────────────────
+*.log
+*.tmp
+dist/
+build/
+*.egg-info/

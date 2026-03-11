@@ -1,0 +1,453 @@
+{
+  "Fungal infection": {
+    "description": "A fungal infection caused by various fungi affecting skin, nails, or internal organs.",
+    "precautions": [
+      "Keep skin dry and clean",
+      "Avoid sharing personal items",
+      "Wear breathable fabrics",
+      "Use antifungal powder in moist areas"
+    ],
+    "treatment": "Antifungal creams or oral antifungal medications prescribed by a doctor.",
+    "diet": "Reduce sugar intake, eat probiotic-rich foods like yogurt, avoid processed foods."
+  },
+  "Allergy": {
+    "description": "An immune system reaction to substances (allergens) that are usually harmless.",
+    "precautions": [
+      "Identify and avoid allergens",
+      "Carry antihistamines",
+      "Keep environment dust-free",
+      "Wear a medical alert bracelet"
+    ],
+    "treatment": "Antihistamines, corticosteroids, decongestants, immunotherapy for long-term.",
+    "diet": "Anti-inflammatory foods, avoid known food triggers, eat quercetin-rich foods (apples, onions)."
+  },
+  "GERD": {
+    "description": "Gastroesophageal reflux disease \u2014 chronic acid reflux where stomach acid flows into the esophagus.",
+    "precautions": [
+      "Avoid lying down after meals",
+      "Eat smaller meals",
+      "Avoid spicy and fatty foods",
+      "Elevate head while sleeping"
+    ],
+    "treatment": "Antacids, PPIs (omeprazole), H2 blockers, lifestyle changes.",
+    "diet": "Avoid coffee, alcohol, citrus, spicy foods. Eat oatmeal, bananas, ginger, green vegetables."
+  },
+  "Chronic cholestasis": {
+    "description": "A liver condition where bile flow is reduced or blocked, causing bile to accumulate.",
+    "precautions": [
+      "Avoid alcohol completely",
+      "Take fat-soluble vitamin supplements",
+      "Regular liver function tests",
+      "Avoid hepatotoxic drugs"
+    ],
+    "treatment": "Ursodeoxycholic acid, cholestyramine for itch, treat underlying cause.",
+    "diet": "Low-fat diet, fat-soluble vitamins A/D/E/K supplementation, avoid alcohol."
+  },
+  "Drug Reaction": {
+    "description": "An adverse reaction to medication, ranging from mild skin rash to life-threatening anaphylaxis.",
+    "precautions": [
+      "Always inform doctors of all allergies",
+      "Carry a medical ID card",
+      "Never self-medicate",
+      "Report any new symptoms after starting medication"
+    ],
+    "treatment": "Stop the offending drug immediately, antihistamines, corticosteroids, epinephrine for anaphylaxis.",
+    "diet": "Stay well-hydrated, avoid alcohol, eat light easily digestible foods during recovery."
+  },
+  "Peptic ulcer diseae": {
+    "description": "Sores (ulcers) that develop on the lining of the stomach or upper small intestine.",
+    "precautions": [
+      "Avoid NSAIDs and aspirin",
+      "Quit smoking",
+      "Limit alcohol consumption",
+      "Manage stress effectively"
+    ],
+    "treatment": "PPIs, H2 blockers, antibiotics if H. pylori is detected, antacids.",
+    "diet": "Avoid spicy, acidic, fried foods. Eat fiber-rich foods, cabbage juice, honey, probiotic yogurt."
+  },
+  "AIDS": {
+    "description": "Advanced stage of HIV infection severely compromising the immune system.",
+    "precautions": [
+      "Strict adherence to ART medications",
+      "Safe sex practices always",
+      "Never share needles or syringes",
+      "Regular CD4 count monitoring"
+    ],
+    "treatment": "Antiretroviral therapy (ART) \u2014 lifelong treatment; treat opportunistic infections.",
+    "diet": "High protein, high calorie, nutrient-dense foods; food safety is critical due to low immunity."
+  },
+  "Diabetes ": {
+    "description": "Chronic metabolic disease where the body cannot properly regulate blood sugar levels.",
+    "precautions": [
+      "Monitor blood glucose daily",
+      "Take medications as prescribed",
+      "Exercise 30 minutes daily",
+      "Avoid refined sugar and white flour"
+    ],
+    "treatment": "Type 1: Insulin therapy. Type 2: Oral medications (metformin), insulin, lifestyle changes.",
+    "diet": "Low glycemic index foods, high fiber, lean proteins. Avoid sugary drinks, white rice, refined carbs."
+  },
+  "Gastroenteritis": {
+    "description": "Inflammation of the stomach and intestines usually caused by viral or bacterial infection.",
+    "precautions": [
+      "Wash hands before eating and after toilet",
+      "Drink only clean/boiled water",
+      "Avoid contaminated food",
+      "Isolate from others if contagious"
+    ],
+    "treatment": "Oral rehydration therapy (ORS), rest, antibiotics only if bacterial cause confirmed.",
+    "diet": "BRAT diet: bananas, rice, applesauce, toast. Clear broths, coconut water, avoid dairy and spicy food."
+  },
+  "Bronchial Asthma": {
+    "description": "Chronic inflammation of the airways making breathing difficult with recurring attacks.",
+    "precautions": [
+      "Identify and avoid personal triggers",
+      "Always keep rescue inhaler nearby",
+      "Use air purifiers at home",
+      "Monitor peak flow regularly"
+    ],
+    "treatment": "Short-acting bronchodilators for attacks, inhaled corticosteroids for prevention.",
+    "diet": "Omega-3 rich foods (fish, flaxseed), vitamin D, magnesium-rich foods; avoid sulfites and processed foods."
+  },
+  "Hypertension ": {
+    "description": "Persistently high blood pressure that damages arteries and increases risk of heart disease.",
+    "precautions": [
+      "Reduce sodium intake to <2g/day",
+      "Exercise 150 min/week",
+      "Manage stress with meditation",
+      "Monitor blood pressure at home"
+    ],
+    "treatment": "ACE inhibitors, beta-blockers, diuretics, calcium channel blockers, DASH diet.",
+    "diet": "DASH diet: fruits, vegetables, whole grains, low-fat dairy. Limit salt, alcohol, and saturated fat."
+  },
+  "Migraine": {
+    "description": "Recurring severe headache attacks often with nausea, vomiting, and sensitivity to light/sound.",
+    "precautions": [
+      "Keep a migraine diary to identify triggers",
+      "Maintain regular sleep schedule",
+      "Stay well hydrated",
+      "Reduce screen time and bright light exposure"
+    ],
+    "treatment": "Triptans (sumatriptan) for acute attacks, preventive medications (topiramate, beta-blockers).",
+    "diet": "Avoid red wine, aged cheese, MSG, caffeine withdrawal. Stay hydrated, regular meal times."
+  },
+  "Cervical spondylosis": {
+    "description": "Age-related degeneration of spinal discs and vertebrae in the neck causing pain and stiffness.",
+    "precautions": [
+      "Maintain correct posture",
+      "Use ergonomic workstation setup",
+      "Avoid carrying heavy loads on head/shoulders",
+      "Do gentle neck stretches daily"
+    ],
+    "treatment": "Physical therapy, NSAIDs, muscle relaxants, cervical collar, surgery in severe cases.",
+    "diet": "Calcium and vitamin D-rich foods, omega-3 anti-inflammatory foods, turmeric and ginger."
+  },
+  "Paralysis (brain hemorrhage)": {
+    "description": "Loss of muscle function in part of the body caused by bleeding within the brain.",
+    "precautions": [
+      "Control blood pressure strictly",
+      "Avoid smoking and heavy alcohol",
+      "Manage diabetes and cholesterol",
+      "Seek emergency care immediately for stroke symptoms"
+    ],
+    "treatment": "EMERGENCY surgery, clot removal, blood pressure management, intensive rehabilitation therapy.",
+    "diet": "Low-sodium, heart-healthy diet. Adequate protein for muscle recovery, antioxidant-rich foods."
+  },
+  "Jaundice": {
+    "description": "Yellowing of skin and eyes caused by excess bilirubin, indicating liver or bile duct problems.",
+    "precautions": [
+      "Avoid alcohol completely",
+      "Drink only safe water",
+      "Rest adequately",
+      "Avoid fatty and oily foods"
+    ],
+    "treatment": "Treat the underlying cause (hepatitis, gallstones, etc.); supportive hydration and nutrition.",
+    "diet": "High carbohydrate, very low fat diet. Fresh fruits, vegetables, sugarcane juice, coconut water."
+  },
+  "Malaria": {
+    "description": "Life-threatening parasitic disease spread by Anopheles mosquito bites caused by Plasmodium.",
+    "precautions": [
+      "Sleep under insecticide-treated nets",
+      "Apply DEET repellent on exposed skin",
+      "Take prescribed antimalarials when in endemic areas",
+      "Eliminate standing water around home"
+    ],
+    "treatment": "Artemisinin-based combination therapies (ACTs); chloroquine in sensitive regions.",
+    "diet": "High calorie, high protein foods; plenty of fluids and electrolytes; avoid solid foods during high fever."
+  },
+  "Chicken pox": {
+    "description": "Highly contagious viral infection causing an itchy blister-like rash all over the body.",
+    "precautions": [
+      "Isolate until all sores crust over",
+      "Avoid scratching to prevent scarring",
+      "Keep nails short and clean",
+      "Get varicella vaccine"
+    ],
+    "treatment": "Antihistamines for itch, calamine lotion, acyclovir for severe or at-risk cases.",
+    "diet": "Soft cool foods (yogurt, smoothies), plenty of fluids. Avoid salty, spicy, acidic foods."
+  },
+  "Dengue": {
+    "description": "Mosquito-borne viral disease causing high fever, severe headache, joint pain, and rash.",
+    "precautions": [
+      "Use mosquito repellent (DEET) on skin",
+      "Wear full-sleeve clothing",
+      "Use mosquito nets",
+      "Eliminate stagnant water breeding sites"
+    ],
+    "treatment": "Supportive care only: rest, hydration, paracetamol for fever. AVOID aspirin and ibuprofen.",
+    "diet": "Papaya leaf extract juice, pomegranate juice, coconut water, ORS, kiwi (for platelet boost)."
+  },
+  "Typhoid": {
+    "description": "Serious bacterial infection from Salmonella typhi causing prolonged fever and systemic illness.",
+    "precautions": [
+      "Drink only boiled or bottled water",
+      "Avoid raw street food",
+      "Wash hands thoroughly before eating",
+      "Get typhoid vaccine before travel to endemic areas"
+    ],
+    "treatment": "Antibiotics: ciprofloxacin, azithromycin, or ceftriaxone; 7-14 days course; rest and hydration.",
+    "diet": "High calorie soft foods: boiled rice, bananas, boiled potatoes, soups. Avoid raw/spicy/fried foods."
+  },
+  "hepatitis A": {
+    "description": "Viral liver infection spread through contaminated food and water, usually self-limiting.",
+    "precautions": [
+      "Wash hands before eating and after toilet",
+      "Drink only safe water",
+      "Avoid raw shellfish",
+      "Get Hepatitis A vaccine"
+    ],
+    "treatment": "Supportive care, rest, adequate nutrition, avoid alcohol. No specific antiviral needed.",
+    "diet": "High carbohydrate, very low fat diet. Fresh juices, fruits, vegetables. Absolutely no alcohol."
+  },
+  "Hepatitis B": {
+    "description": "Viral liver infection spread through blood, sexual contact, and mother-to-child transmission.",
+    "precautions": [
+      "Get vaccinated (3-dose series)",
+      "Practice safe sex",
+      "Never share needles",
+      "Don't share razors or toothbrushes"
+    ],
+    "treatment": "Antiviral medications (tenofovir, entecavir) for chronic cases; regular liver monitoring.",
+    "diet": "Low fat, high protein, avoid alcohol and raw shellfish. Liver-supportive foods: beets, carrots, leafy greens."
+  },
+  "Hepatitis C": {
+    "description": "Viral liver infection primarily spread through blood-to-blood contact, often leading to chronic liver disease.",
+    "precautions": [
+      "Never share needles or drug equipment",
+      "Use gloves when handling blood",
+      "Ensure sterile medical/dental procedures",
+      "Regular liver function tests"
+    ],
+    "treatment": "Direct-acting antivirals (DAAs) \u2014 8-12 week treatment with >95% cure rate.",
+    "diet": "Liver-friendly diet: avoid alcohol, processed foods, excess sodium. Eat fruits, vegetables, whole grains."
+  },
+  "Hepatitis D": {
+    "description": "Liver infection caused by Hepatitis D virus, only occurs in people already infected with Hepatitis B.",
+    "precautions": [
+      "Hepatitis B vaccination also prevents D",
+      "Avoid sharing needles",
+      "Safe sex practices",
+      "Regular liver monitoring if HBV+"
+    ],
+    "treatment": "Pegylated interferon-alpha; treat underlying Hepatitis B infection.",
+    "diet": "Same as Hepatitis B: low fat, no alcohol, high antioxidant foods."
+  },
+  "Hepatitis E": {
+    "description": "Liver infection from Hepatitis E virus, spread through contaminated water, common in developing regions.",
+    "precautions": [
+      "Drink boiled or purified water only",
+      "Practice strict food hygiene",
+      "Avoid raw shellfish",
+      "Wash hands frequently with soap"
+    ],
+    "treatment": "Usually self-limiting in 4-6 weeks; rest and hydration; ribavirin for severe/chronic cases.",
+    "diet": "Low fat, easily digestible foods. Avoid alcohol completely. Stay well hydrated."
+  },
+  "Alcoholic hepatitis": {
+    "description": "Liver inflammation caused by excessive alcohol consumption over time.",
+    "precautions": [
+      "Stop drinking alcohol immediately and permanently",
+      "Seek addiction counseling/support",
+      "Nutritional rehabilitation",
+      "Regular liver function monitoring"
+    ],
+    "treatment": "Complete alcohol abstinence, corticosteroids, nutritional support, liver transplant in end-stage.",
+    "diet": "High calorie, high protein diet. Vitamins B1 (thiamine), B12, folate supplementation. No alcohol ever."
+  },
+  "Tuberculosis": {
+    "description": "Contagious bacterial infection caused by Mycobacterium tuberculosis, primarily affecting lungs.",
+    "precautions": [
+      "Complete the FULL 6-month antibiotic course without missing doses",
+      "Cover mouth with elbow when coughing",
+      "Ensure good room ventilation",
+      "Get tested if exposed to TB patient"
+    ],
+    "treatment": "DOTS therapy: 6-9 months of HRZE antibiotics (Isoniazid, Rifampicin, Pyrazinamide, Ethambutol).",
+    "diet": "High calorie, high protein diet. Vitamin D, zinc, iron, B-vitamin supplementation. Avoid alcohol."
+  },
+  "Common Cold": {
+    "description": "Mild viral respiratory infection of the upper respiratory tract, usually caused by rhinovirus.",
+    "precautions": [
+      "Wash hands frequently for 20+ seconds",
+      "Avoid touching face",
+      "Avoid close contact with infected people",
+      "Disinfect frequently touched surfaces"
+    ],
+    "treatment": "Symptomatic only: rest, hydration, decongestants, throat lozenges, saline nasal spray.",
+    "diet": "Warm soups and broths, herbal teas with honey, citrus fruits, ginger-garlic, hot water with turmeric."
+  },
+  "Pneumonia": {
+    "description": "Serious infection inflaming air sacs in lungs, filling them with fluid or pus.",
+    "precautions": [
+      "Get pneumococcal and flu vaccines",
+      "Wash hands frequently",
+      "Don't smoke",
+      "Seek early medical care for respiratory symptoms"
+    ],
+    "treatment": "Antibiotics for bacterial, antivirals for viral pneumonia. Hospitalization if oxygen levels drop.",
+    "diet": "Warm fluids, broths, vitamin C rich fruits, easily digestible light foods. Avoid dairy if congested."
+  },
+  "Dimorphic hemmorhoids(piles)": {
+    "description": "Swollen and inflamed veins in the rectum and anus causing pain, itching, and bleeding.",
+    "precautions": [
+      "Eat high-fiber diet daily",
+      "Drink 8+ glasses of water",
+      "Avoid straining during bowel movements",
+      "Exercise regularly; avoid prolonged sitting"
+    ],
+    "treatment": "Sitz baths, topical creams (hydrocortisone), fiber supplements, sclerotherapy, surgery if severe.",
+    "diet": "High fiber: whole grains, legumes, vegetables, fruits. Drink 2-3L water daily. Avoid spicy food."
+  },
+  "Heart attack": {
+    "description": "Emergency: blockage of blood supply to heart muscle causing permanent damage or death.",
+    "precautions": [
+      "CALL EMERGENCY SERVICES IMMEDIATELY",
+      "Chew aspirin 325mg if not allergic",
+      "Keep patient calm and still",
+      "Begin CPR if person is unconscious and not breathing"
+    ],
+    "treatment": "EMERGENCY: Thrombolytics, angioplasty/stent, bypass surgery, cardiac medications, ICU care.",
+    "diet": "Post-recovery: Mediterranean diet \u2014 olive oil, fish, whole grains, vegetables, nuts. Limit red meat, salt."
+  },
+  "Varicose veins": {
+    "description": "Enlarged, twisted, bulging veins (usually in legs) due to weakened vein walls and valves.",
+    "precautions": [
+      "Elevate legs above heart level when resting",
+      "Avoid prolonged standing or sitting",
+      "Wear graduated compression stockings",
+      "Exercise regularly (walking, swimming)"
+    ],
+    "treatment": "Compression stockings, sclerotherapy, endovenous laser treatment, surgical stripping.",
+    "diet": "High fiber, low sodium diet. Foods with rutin (buckwheat, asparagus). Maintain healthy weight."
+  },
+  "Hypothyroidism": {
+    "description": "Underactive thyroid gland that produces insufficient thyroid hormone, slowing body functions.",
+    "precautions": [
+      "Take levothyroxine at same time every day on empty stomach",
+      "Regular TSH blood tests",
+      "Avoid excess soy and raw cruciferous vegetables",
+      "Inform all doctors about your condition"
+    ],
+    "treatment": "Levothyroxine (synthetic T4) hormone replacement \u2014 lifelong in most cases.",
+    "diet": "Selenium-rich foods (Brazil nuts, tuna), iodine (seaweed, dairy), zinc. Limit raw kale, broccoli, soy."
+  },
+  "Hyperthyroidism": {
+    "description": "Overactive thyroid gland producing excess thyroid hormone, speeding up body functions.",
+    "precautions": [
+      "Regular thyroid function monitoring",
+      "Avoid iodine-rich foods and supplements",
+      "Protect eyes from sun (Graves disease)",
+      "Manage stress and get adequate rest"
+    ],
+    "treatment": "Antithyroid drugs (methimazole), radioactive iodine therapy, beta-blockers, thyroid surgery.",
+    "diet": "Avoid iodine-rich foods (seaweed, iodized salt). Eat cruciferous vegetables, calcium-rich foods for bone health."
+  },
+  "Hypoglycemia": {
+    "description": "Dangerously low blood sugar levels causing dizziness, confusion, sweating, and fainting.",
+    "precautions": [
+      "Never skip meals",
+      "Always carry fast-acting glucose (glucose tablets, juice)",
+      "Monitor blood sugar regularly",
+      "Wear a medical alert bracelet"
+    ],
+    "treatment": "IMMEDIATE: 15g fast-acting glucose (4oz juice, 3-4 glucose tablets). Follow with complex carbs + protein.",
+    "diet": "Regular small meals every 3-4 hours. Always combine carbs with protein. Avoid alcohol on empty stomach."
+  },
+  "Osteoarthristis": {
+    "description": "Degenerative joint disease where protective cartilage breaks down, causing pain and stiffness.",
+    "precautions": [
+      "Maintain healthy BMI to reduce joint load",
+      "Low-impact exercise (swimming, cycling)",
+      "Use joint protection techniques",
+      "Apply heat/cold therapy for pain relief"
+    ],
+    "treatment": "NSAIDs, physical therapy, corticosteroid injections, hyaluronic acid injections, joint replacement.",
+    "diet": "Anti-inflammatory: omega-3 (fish, walnuts), turmeric, ginger, vitamin D and calcium for bone health."
+  },
+  "Arthritis": {
+    "description": "Inflammation of one or more joints causing pain, swelling, stiffness, and reduced range of motion.",
+    "precautions": [
+      "Stay active with gentle exercise (yoga, walking)",
+      "Protect joints during activities",
+      "Maintain healthy weight",
+      "Apply hot/cold packs for symptom relief"
+    ],
+    "treatment": "NSAIDs, DMARDs for rheumatoid arthritis, corticosteroids, biologic agents, physical therapy.",
+    "diet": "Anti-inflammatory diet: fatty fish, nuts, olive oil, colorful fruits and vegetables. Avoid processed foods."
+  },
+  "(vertigo) Paroymsal  Positional Vertigo": {
+    "description": "Brief episodes of intense dizziness and spinning sensation triggered by specific head movements.",
+    "precautions": [
+      "Move head and body slowly and deliberately",
+      "Install grab bars in bathroom",
+      "Sleep with head slightly elevated",
+      "Avoid sudden position changes (lying down to standing)"
+    ],
+    "treatment": "Epley maneuver (canalith repositioning procedure), vestibular rehabilitation exercises.",
+    "diet": "Low sodium diet reduces fluid retention in inner ear. Stay hydrated. Avoid caffeine and alcohol."
+  },
+  "Acne": {
+    "description": "Common skin condition where hair follicles become clogged with oil and dead skin cells.",
+    "precautions": [
+      "Wash face gently twice daily with mild cleanser",
+      "Never pop or squeeze pimples",
+      "Use only non-comedogenic (oil-free) products",
+      "Change pillowcases twice a week"
+    ],
+    "treatment": "Topical retinoids, benzoyl peroxide, salicylic acid, antibiotics, isotretinoin for severe cystic acne.",
+    "diet": "Low glycemic index diet, reduce dairy intake, eat zinc-rich foods (pumpkin seeds, lentils), omega-3."
+  },
+  "Urinary tract infection": {
+    "description": "Bacterial infection in the urinary system (bladder, urethra, kidneys) causing burning and urgency.",
+    "precautions": [
+      "Drink 8-10 glasses of water daily",
+      "Always wipe front to back",
+      "Urinate shortly after intercourse",
+      "Avoid holding urine for long periods"
+    ],
+    "treatment": "Antibiotics (trimethoprim, nitrofurantoin, ciprofloxacin) for 3-7 days; increased fluid intake.",
+    "diet": "Drink plenty of water and unsweetened cranberry juice. Avoid caffeine, alcohol, and spicy foods."
+  },
+  "Psoriasis": {
+    "description": "Chronic autoimmune skin condition causing rapid skin cell buildup resulting in scales and red patches.",
+    "precautions": [
+      "Moisturize skin daily especially after bathing",
+      "Identify and avoid personal triggers (stress, infections)",
+      "Use gentle, fragrance-free skin products",
+      "Protect skin from cuts and injuries"
+    ],
+    "treatment": "Topical corticosteroids, vitamin D analogues, biologics (adalimumab), methotrexate, phototherapy.",
+    "diet": "Anti-inflammatory diet: omega-3 rich fish, avoid alcohol (major trigger), reduce red meat."
+  },
+  "Impetigo": {
+    "description": "Highly contagious superficial bacterial skin infection causing honey-colored crusting sores.",
+    "precautions": [
+      "Keep sores loosely covered with gauze",
+      "Wash hands frequently with soap",
+      "Don't share towels, clothing, or razors",
+      "Keep nails short to avoid scratching and spreading"
+    ],
+    "treatment": "Topical mupirocin antibiotic cream for mild cases; oral antibiotics (amoxicillin) for widespread infection.",
+    "diet": "Vitamin C-rich foods to support skin healing. Adequate protein for immune and tissue repair."
+  }
+}
