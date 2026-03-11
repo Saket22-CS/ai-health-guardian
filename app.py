@@ -168,24 +168,31 @@ h1, h2, h3 { font-family: 'Syne', sans-serif !important; color: #e2e8f0 !importa
     line-height: 1.6;
 }
 
-/* ── All buttons: bright visible green ── */
-.stButton > button {
+/* ── All buttons — green gradient ── */
+.stButton > button,
+.stFormSubmitButton > button,
+[data-testid="stFormSubmitButton"] > button {
     background: linear-gradient(135deg, #00c896, #00a07a) !important;
-    color: #050e0a !important;
+    color: #ffffff !important;
     border: none !important;
     border-radius: 12px !important;
     padding: 0.55rem 1.6rem !important;
     font-family: 'Syne', sans-serif !important;
     font-weight: 700 !important;
-    font-size: 0.88rem !important;
+    font-size: 0.9rem !important;
     letter-spacing: 0.02em !important;
     transition: all 0.2s ease !important;
-    min-height: 42px !important;
+    min-height: 44px !important;
+    width: 100% !important;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3) !important;
 }
-.stButton > button:hover {
+.stButton > button:hover,
+.stFormSubmitButton > button:hover,
+[data-testid="stFormSubmitButton"] > button:hover {
     transform: translateY(-2px) !important;
     box-shadow: 0 8px 24px rgba(0,200,150,0.4) !important;
     background: linear-gradient(135deg, #00e6aa, #00b88a) !important;
+    color: #ffffff !important;
 }
 
 /* ── Inputs ── */
@@ -229,14 +236,8 @@ p, li, label { color: #94a3b8 !important; }
 /* Fix: push content below Streamlit top bar */
 .block-container { padding-top: 2.8rem !important; }
 
-/* ── Chip buttons: target by button key (qq0-qq3, pm0-pm5) ── */
-/* Streamlit sets data-testid on the button's parent div */
-[data-testid="stButton"]:has(button[kind="secondary"]) > button,
-button[data-testid="qq0"], button[data-testid="qq1"],
-button[data-testid="qq2"], button[data-testid="qq3"],
-button[data-testid="pm0"], button[data-testid="pm1"],
-button[data-testid="pm2"], button[data-testid="pm3"],
-button[data-testid="pm4"], button[data-testid="pm5"] {
+/* ── Chip buttons: qq and pm keys via Streamlit's key attribute ── */
+[data-testid="stBaseButton-secondary"] {
     background: rgba(0,255,180,0.04) !important;
     color: #64748b !important;
     border: 1px solid rgba(0,255,180,0.18) !important;
@@ -249,24 +250,79 @@ button[data-testid="pm4"], button[data-testid="pm5"] {
     box-shadow: none !important;
     transform: none !important;
     min-height: 0 !important;
+    width: auto !important;
+}
+[data-testid="stBaseButton-secondary"]:hover {
+    border-color: rgba(0,255,180,0.5) !important;
+    color: #00ffb4 !important;
+    background: rgba(0,255,180,0.08) !important;
+    transform: none !important;
+    box-shadow: none !important;
 }
 </style>
 """, unsafe_allow_html=True)
 
 
+# ── Google Drive file IDs — paste your IDs here after uploading ──────────────
+GDRIVE_IDS = {
+    "disease_model.pkl":    "11gb8ofi_3rOM64Z3q8omzLUVQ9S2ZRI2",
+    "label_encoder.pkl":    "1EPQoAOM_oyJfSi3YaYO8JfaY-lKwVHoR",
+    "symptom_columns.json": "10o7xfz0lwjiVR7FJe7--5X7H3mAD2O51",
+    "disease_info.json":    "1Z8S3mDLEIJfyTOCiV-dO7PFzpnXQZCHd",
+}
+
+def download_from_gdrive():
+    """Download model files from Google Drive if not present locally."""
+    try:
+        import gdown
+    except ImportError:
+        st.error("gdown not installed. Add 'gdown' to requirements.txt")
+        return False
+
+    os.makedirs("model", exist_ok=True)
+    os.makedirs("data",  exist_ok=True)
+
+    files = {
+        "model/disease_model.pkl":    GDRIVE_IDS["disease_model.pkl"],
+        "model/label_encoder.pkl":    GDRIVE_IDS["label_encoder.pkl"],
+        "model/symptom_columns.json": GDRIVE_IDS["symptom_columns.json"],
+        "data/disease_info.json":     GDRIVE_IDS["disease_info.json"],
+    }
+
+    for path, file_id in files.items():
+        if not os.path.exists(path):
+            if "PASTE_" in file_id:
+                st.error(f"⚠️ Google Drive ID not set for {path}. Please update GDRIVE_IDS in app.py")
+                return False
+            try:
+                url = f"https://drive.google.com/uc?id={file_id}"
+                gdown.download(url, path, quiet=True, fuzzy=True)
+            except Exception as e:
+                st.error(f"Failed to download {path}: {e}")
+                return False
+    return True
+
 # ── Load model artifacts ──────────────────────────────────────────────────────
 @st.cache_resource
 def load_model():
+    # Try local first, then download from Google Drive
+    if not os.path.exists("model/disease_model.pkl"):
+        with st.spinner("⬇️ Downloading model files from Google Drive (first run only)..."):
+            if not download_from_gdrive():
+                return None, None, None
     try:
         model = pickle.load(open("model/disease_model.pkl","rb"))
         le    = pickle.load(open("model/label_encoder.pkl","rb"))
         syms  = json.load(open("model/symptom_columns.json"))
         return model, le, syms
-    except:
+    except Exception as e:
+        st.error(f"Model load error: {e}")
         return None, None, None
 
 @st.cache_data
 def load_disease_info():
+    if not os.path.exists("data/disease_info.json"):
+        download_from_gdrive()
     try:
         return json.load(open("data/disease_info.json"))
     except:
@@ -289,7 +345,7 @@ with st.sidebar:
     """, unsafe_allow_html=True)
     st.markdown("<hr style='margin:0.5rem 0'>", unsafe_allow_html=True)
 
-    page = st.radio("", [
+    page = st.radio("Navigation", [
         "🏠  Home",
         "🔬  Symptom Checker",
         "❤️  Risk Assessment",
@@ -638,13 +694,13 @@ elif page == "🤖  AI Health Chatbot":
     qcols = st.columns(len(qq))
     for i, q in enumerate(qq):
         with qcols[i]:
-            if st.button(q, key=f"qq{i}", use_container_width=True):
+            if st.button(q, key=f"qq{i}", use_container_width=True, type="secondary"):
                 q_clicked = q
 
 
     ci, cb = st.columns([6,1])
     with ci:
-        user_in = st.text_input("", placeholder="Ask Dr. AI anything about your health...",
+        user_in = st.text_input("Chat input", placeholder="Ask Dr. AI anything about your health...",
                                 key="chat_inp", label_visibility="collapsed")
     with cb:
         send = st.button("Send ➤", use_container_width=True)
@@ -673,7 +729,7 @@ elif page == "💊  Medicine Info":
 
     mc1, mc2 = st.columns([4,1])
     with mc1:
-        med = st.text_input("", placeholder="Enter medicine name e.g. Paracetamol, Metformin, Aspirin...",
+        med = st.text_input("Medicine name", placeholder="Enter medicine name e.g. Paracetamol, Metformin, Aspirin...",
                             label_visibility="collapsed")
     with mc2:
         search = st.button("🔍 Search", use_container_width=True)
@@ -684,7 +740,7 @@ elif page == "💊  Medicine Info":
     pop_cols = st.columns(6)
     pop_clicked = None
     for i, m in enumerate(pops):
-        if pop_cols[i].button(m, key=f"pm{i}"):
+        if pop_cols[i].button(m, key=f"pm{i}", type="secondary"):
             pop_clicked = m
 
     final_med = pop_clicked or (med if search and med else None)
