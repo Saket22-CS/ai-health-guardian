@@ -296,16 +296,23 @@ def download_from_gdrive():
 # ── Load model artifacts ──────────────────────────────────────────────────────
 @st.cache_resource
 def load_model():
+    if not os.path.exists("model/disease_model.pkl"):
+        with st.spinner("⬇️ Downloading model files from Google Drive..."):
+            if not download_from_gdrive():
+                return None, None, None
     try:
         model = pickle.load(open("model/disease_model.pkl","rb"))
         le    = pickle.load(open("model/label_encoder.pkl","rb"))
         syms  = json.load(open("model/symptom_columns.json"))
         return model, le, syms
-    except:
+    except Exception as e:
+        st.error(f"Model load error: {e}")
         return None, None, None
 
 @st.cache_data
 def load_disease_info():
+    if not os.path.exists("data/disease_info.json"):
+        download_from_gdrive()
     try:
         return json.load(open("data/disease_info.json"))
     except:
